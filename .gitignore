@@ -1,0 +1,15 @@
+# OSX specific
+.DS_Store
+
+# Ignore-IDE: Eclipse/ZendStudio
+/.settings/
+/.buildpath
+/.project
+
+# Composer
+composer.lock
+/vendor/
+/node_modules/
+
+# misc
+/foo.php
