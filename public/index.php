@@ -51,11 +51,15 @@ function huBytes($bytes)
     return sprintf('%.2F %s', $bytes, $units[$curUnit]);
 }
 
-$memcached = new App\Memcached;
-
 if (!empty($_GET['view'])) {
+    $memcached = new Memcached;
+    $memcached->addServer('127.0.0.1', 11211);
     $data = $memcached->get($_GET['view']);
+    if (is_array($data) || is_object($data)) {
+        $data = var_export($data, true);
+    }
 } else {
+    $memcached = new App\MemcachedRaw;
     $allKeys = $memcached->getAllKeys();
 }
 

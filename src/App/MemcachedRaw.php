@@ -13,7 +13,7 @@ namespace App;
 
 use Exception;
 
-class Memcached
+class MemcachedRaw
 {
     protected $socket;
 
