@@ -1,10 +1,27 @@
 <?php
 
+/**
+ * This file is part of the tiny-memcached-ui project.
+ *
+ * (c) Gunter Grodotzki <gunter@grodotzki.co.za>
+ *
+ * For the full copyright and license information, please view the LICENSE file
+ * that was distributed with this source code.
+ */
+
 error_reporting(E_ALL);
 ini_set('display_errors', true);
 
+header('Content-Type: text/html; charset=UTF-8');
+
 require '../vendor/autoload.php';
 
+/**
+ * safely escape strings for html output
+ * @param string $string
+ * @param bool $return
+ * @return string
+ */
 function escaped($string, $return = false)
 {
     $string = htmlspecialchars($string, ENT_QUOTES|ENT_HTML5, 'UTF-8');
@@ -16,6 +33,11 @@ function escaped($string, $return = false)
     }
 }
 
+/**
+ * converty bytes into a human readable format
+ * @param int $bytes
+ * @return string
+ */
 function huBytes($bytes)
 {
     $units = ['B', 'kB', 'MB', 'GB', 'TB', 'PB'];
@@ -37,6 +59,7 @@ if (!empty($_GET['view'])) {
     $allKeys = $memcached->getAllKeys();
 }
 
+unset($memcached);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,6 +115,3 @@ if (!empty($_GET['view'])) {
     </div>
 </body>
 </html>
-<?php
-unset($memcached);
-?>

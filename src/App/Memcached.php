@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * This file is part of the tiny-memcached-ui project.
+ *
+ * (c) Gunter Grodotzki <gunter@grodotzki.co.za>
+ *
+ * For the full copyright and license information, please view the LICENSE file
+ * that was distributed with this source code.
+ */
+
 namespace App;
 
 use Exception;
