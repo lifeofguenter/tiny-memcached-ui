@@ -16,7 +16,11 @@ composer create-project lifeofguenter/tiny-memcached-ui path/to/install
 
 ## Screenshots
 
+### List of keys
+
 [![All keys](https://i.pic.sr/Screen-Shot-2017-02-26-at-1-21-05-PM_8779135.png)](https://pic.sr/Screen-Shot-2017-02-26-at-1-21-05-PM_8779135)
+
+### Cache content
 
 [![Key data](https://i.pic.sr/Screen-Shot-2017-02-26-at-1-21-28-PM_318c5d5.png)](https://pic.sr/Screen-Shot-2017-02-26-at-1-21-28-PM_318c5d5)
 
