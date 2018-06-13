@@ -43,8 +43,8 @@ function huBytes($bytes)
     $units = ['B', 'kB', 'MB', 'GB', 'TB', 'PB'];
     $curUnit = 0;
 
-    while($bytes > 1000) {
-        $bytes /= 1000;
+    while($bytes > 1024) {
+        $bytes /= 1024;
         ++$curUnit;
     }
 
